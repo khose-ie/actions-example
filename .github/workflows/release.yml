@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: ./.github/workflows/checkout-code
+    - uses: ./.github/workflows/actions/checkout-code
 
