@@ -1,0 +1,8 @@
+name: "Checkout code"
+runs-on: ubuntu-latest
+
+runs:
+  using: "composite"
+
+  steps:
+  - uses: actions/checkout@v3
