@@ -2,16 +2,13 @@ name: "Checkout code"
 runs-on: ubuntu-latest
 
 runs:
-  using: "composite"
+  # using: "composite"
 
   steps:
   - name: Set version number
-    run: |
-      VERSION=100000
-      echo "${VERSION#*release-}" >> version.txt
+    run: echo "1.0.0" >> version.txt
 
-  - name: Upload version number file
-    uses: actions/upload-artifact@v3
+  - uses: actions/upload-artifact@v3
     with:
       name: version
       path: version.txt
