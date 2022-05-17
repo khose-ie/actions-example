@@ -6,6 +6,7 @@ runs:
 
   steps:
     - run: echo "1.0.0" >> version.txt
+      shell: bash
 
     - uses: actions/upload-artifact@v3
       with:
