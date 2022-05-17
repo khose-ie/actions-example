@@ -5,10 +5,10 @@ runs:
   # using: "composite"
 
   steps:
-  - name: Set version number
-    run: echo "1.0.0" >> version.txt
+    - name: Set version number
+      run: echo "1.0.0" >> version.txt
 
-  - uses: actions/upload-artifact@v3
-    with:
-      name: version
-      path: version.txt
+    - uses: actions/upload-artifact@v3
+      with:
+        name: version
+        path: version.txt
