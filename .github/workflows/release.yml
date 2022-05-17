@@ -11,6 +11,9 @@ jobs:
     - uses: actions/checkout@v3
     - uses: ./.github/workflows/actions/checkout-code
 
+    - name: Get version number
+      run: echo "version_num=${{ env.version_num }}"
+
     - name: Download version number file
       uses: actions/download-artifact@v3
       with:
