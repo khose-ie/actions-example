@@ -5,4 +5,13 @@ runs:
   using: "composite"
 
   steps:
-  - uses: actions/checkout@v3
+  - name: Set version number
+    run: |
+      VERSION=100000
+      echo "${VERSION#*release-}" >> version.txt
+
+  - name: Upload version number file
+    uses: actions/upload-artifact@v3
+    with:
+      name: version
+      path: version.txt
