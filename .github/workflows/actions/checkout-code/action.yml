@@ -1,14 +1,14 @@
 name: "Checkout code"
-runs-on: ubuntu-latest
+# runs-on: ubuntu-latest
 
 runs:
   using: "composite"
 
   steps:
-  - run: echo "1.0.0" >> VERSION.txt
+  - run: echo "1.0.0" >> version.txt
     shell: bash
 
-  # - uses: actions/upload-artifact@v3
-  #   with:
-  #     name: version
-  #     path: version.txt
+  - uses: actions/upload-artifact@v3
+    with:
+      name: version
+      path: version.txt
