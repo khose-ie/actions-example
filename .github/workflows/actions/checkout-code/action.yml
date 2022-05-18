@@ -3,6 +3,7 @@ name: "Checkout code"
 outputs:
   test: # id of output
     description: 'The time we greeted you'
+    value: ${{ steps.step1.outputs.test }}
     # output1: ${{ steps.step1.outputs.test }}
     # output2: ${{ steps.step2.outputs.test }}
 
