@@ -34,4 +34,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: version_job
     steps:
-    - run: echo "${{ jobs.version_job.steps.version_step.outputs.version_number }}"
+    - run: echo "${{ needs.version_job.steps.version_step.outputs.version_number }}"
+
