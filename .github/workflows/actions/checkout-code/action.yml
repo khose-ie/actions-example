@@ -3,6 +3,9 @@ name: "Checkout code"
 
 runs:
   using: "composite"
+  outputs:
+    output1: ${{ steps.step1.outputs.test }}
+    output2: ${{ steps.step2.outputs.test }}
 
   steps:
   - run:  echo "version_num=1.0.0" >> ${GITHUB_ENV}
@@ -15,6 +18,7 @@ runs:
     with:
       name: version
       path: version.txt
+
   - id: step1
     run: echo "::set-output name=test::hello"
     shell: bash
