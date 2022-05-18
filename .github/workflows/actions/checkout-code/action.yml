@@ -1,7 +1,8 @@
 name: "Checkout code"
 # runs-on: ubuntu-latest
 outputs:
-  test:
+  test: # id of output
+    description: 'The time we greeted you'
     # output1: ${{ steps.step1.outputs.test }}
     # output2: ${{ steps.step2.outputs.test }}
 
