@@ -7,6 +7,9 @@ on:
 jobs:
   checkout-code:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+      output2: ${{ steps.step2.outputs.test }}
     steps:
     - uses: actions/checkout@v3
     - uses: ./.github/workflows/actions/checkout-code
