@@ -7,6 +7,7 @@ outputs:
     # output1: ${{ steps.step1.outputs.test }}
     # output2: ${{ steps.step2.outputs.test }}
 
+
 runs:
   using: "composite"
 

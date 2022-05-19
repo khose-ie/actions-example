@@ -7,6 +7,7 @@ on:
 env:
   SERVER: production
   SERVER1: ${SERVER}1
+  HELLO: ${{ secrets.HELLO }}
 
 jobs:
   checkout-code:
@@ -18,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - run: echo ${{ secrets.HELLO }}
+    - run: echo ${{ env.HELLO }}
 
 
     - run: echo ${{ env.SERVER1 }}
