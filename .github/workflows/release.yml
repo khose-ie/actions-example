@@ -44,9 +44,12 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     needs: checkout-code
+    env:
+      OUT: ${{ needs.checkout-code.outputs.output1 }}
+  
     steps:
     - run: echo ${{ needs.checkout-code.outputs.output1 }} ${{ needs.checkout-code.outputs.output1 }}
-
+    - run: echo ${{ env.OUT }} 
 
   # version_job:
   #   name: Create version number
