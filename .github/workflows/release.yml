@@ -16,6 +16,8 @@ jobs:
     - id: step1
       uses: ./.github/workflows/actions/checkout-code
 
+    - run: echo ${{ env.version_num }}
+
     # - name: Get version number
     #   run: echo "version_num=${{ env.version_num }}"
 

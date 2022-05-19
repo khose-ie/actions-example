@@ -14,6 +14,9 @@ runs:
   - run:  echo "version_num=1.0.0" >> ${GITHUB_ENV}
     shell: bash
 
+  - run: echo ${{ env.version_num }}
+    shell: bash
+
   - run: echo "1.0.0" >> version.txt
     shell: bash
 
