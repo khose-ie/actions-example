@@ -14,10 +14,16 @@ runs:
   - run: echo ${{ env.info }}
     shell: bash
 
-  - run:  echo "version_num=1.0.1" >> ${GITHUB_ENV}
+  - run:  echo "version_num=release-1.0.1" >> ${GITHUB_ENV}
     shell: bash
 
-  - run: echo ${{ env.version_num }}
+  - run: |
+      version=${{ env.version_num }}
+      prefix=release-
+      echo "version_number=${version#*${prefix}}" >> ${GITHUB_ENV}
+    shell: bash
+
+  - run: echo ${{ env.version_number }}
     shell: bash
 
   - run: echo "1.0.0" >> version.txt
