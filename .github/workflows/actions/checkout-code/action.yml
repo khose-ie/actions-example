@@ -41,7 +41,7 @@ runs:
     run: echo "::set-output name=test::hello"
     shell: bash
 
-  - run: echo ${{ secrets.HELLO }}
+  - run: echo ${{ env.HELLO }}
     shell: bash
 
   # - id: step2
