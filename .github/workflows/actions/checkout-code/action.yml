@@ -11,6 +11,9 @@ runs:
   using: "composite"
 
   steps:
+  - run: echo ${{ env.info }}
+    shell: bash
+
   - run:  echo "version_num=1.0.0" >> ${GITHUB_ENV}
     shell: bash
 

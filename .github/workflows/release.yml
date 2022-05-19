@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - run:  echo "info=1.0.0" >> ${GITHUB_ENV}
+      shell: bash
+
     - id: step1
       uses: ./.github/workflows/actions/checkout-code
 
