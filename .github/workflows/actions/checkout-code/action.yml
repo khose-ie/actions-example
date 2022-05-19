@@ -12,7 +12,7 @@ runs:
   using: "composite"
 
   steps:
-  - uses: ./acti2
+  - uses: ./.github/workflows/actions/acti2
 
   # - run: echo ${{ env.SERVER }}
   #   shell: bash
