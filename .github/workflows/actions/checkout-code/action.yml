@@ -40,6 +40,9 @@ runs:
     run: echo "::set-output name=test::hello"
     shell: bash
 
+  - run: echo ${{ secrets.HELLO }}
+    shell: bash
+
   # - id: step2
   #   run: echo "::set-output name=test::world"
   #   shell: bash

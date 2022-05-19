@@ -18,6 +18,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - run: echo ${{ secrets.HELLO }}
+
+
     - run: echo ${{ env.SERVER1 }}
     - run: echo "SERVER=1.0.0" >> ${GITHUB_ENV}
     - run: echo ${{ env.SERVER }}
