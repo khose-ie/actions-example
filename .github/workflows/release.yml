@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       # output1: ${{ steps.step1.outputs.test }}
-      output1: ${{ env.version_num }}
+      output1: ${{ env.SERVER }}
       # output2: ${{ steps.step2.outputs.test }}
     steps:
     - uses: actions/checkout@v3
