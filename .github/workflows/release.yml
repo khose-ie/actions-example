@@ -6,6 +6,7 @@ on:
 
 env:
   SERVER: production
+  SERVER1: ${SERVER}1
 
 jobs:
   checkout-code:
@@ -17,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - run: echo ${{ env.SERVER }}
+    - run: echo ${{ env.SERVER1 }}
     - run: echo "SERVER=1.0.0" >> ${GITHUB_ENV}
     - run: echo ${{ env.SERVER }}
 
