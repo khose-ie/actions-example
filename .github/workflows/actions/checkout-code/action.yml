@@ -11,6 +11,8 @@ runs:
   using: "composite"
 
   steps:
+  - run: echo ${{ env.SERVER }}
+    shell: bash
   - run: echo ${{ env.info }}
     shell: bash
 

@@ -4,6 +4,9 @@ on:
   push:
     branches: master
 
+env:
+  SERVER: production
+
 jobs:
   checkout-code:
     runs-on: ubuntu-latest
